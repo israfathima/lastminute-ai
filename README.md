@@ -1,139 +1,476 @@
-# LastMinute AI
+# 🚀 LastMinute AI
 
-![React](https://img.shields.io/badge/React-19-14B8A6)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115-2563EB)
-![Gemini](https://img.shields.io/badge/Gemini-Agentic_AI-0F172A)
-![Firebase](https://img.shields.io/badge/Firebase-Auth_%2B_Firestore-F59E0B)
-![Cloud Run](https://img.shields.io/badge/Google_Cloud-Run-4285F4)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google-Gemini_AI-4285F4?logo=google&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-Authentication-FFCA28?logo=firebase&logoColor=black)
+![Firestore](https://img.shields.io/badge/Firestore-Database-FFA000?logo=firebase&logoColor=black)
+![Cloud Run](https://img.shields.io/badge/Google_Cloud-Run-4285F4?logo=googlecloud&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-LastMinute AI is an AI-first agentic productivity platform for students, professionals, and entrepreneurs who need help finishing work before deadlines are missed. Instead of passive reminders, it continuously analyzes workload, predicts risk, creates daily schedules, and recommends the next best action.
+An **AI-powered productivity workspace** that helps students, professionals, and entrepreneurs intelligently plan, prioritize, and complete work before deadlines are missed.
 
-## Features
+Unlike traditional task managers, **LastMinute AI** uses **Google Gemini AI** to analyze workload, predict deadline risks, create optimized schedules, estimate success probability, and recommend the next best action.
 
-- Google sign-in with Firebase Authentication
-- User-scoped task management backed by Firestore
-- Gemini-powered structured planning for urgency, risk, milestones, schedule, and motivation
-- AI Command Center with daily focus, workload, deadline health, and success probability
-- Agentic task analysis with priority score, urgency, confidence, start time, finish time, and success probability
-- Natural language task creation for messy real-world commitments
-- Smart daily planner optimized around risk, effort, and focus capacity
-- Floating AI Coach panel with proactive recommendations
-- Focus Mode with one-task view, timer, progress, encouragement, and completion action
-- AI Insights page with weekly review, burnout detection, strengths, weaknesses, and time waste analysis
-- Dashboard with productivity score, risk summary, suggestions, and charts
-- AI Planner with timeline, risk meter, recommendation, and execution steps
-- Analytics for progress, completion rate, categories, and deadline distribution
-- Hackathon story pages for architecture, AI workflow, Google technologies, and project overview
-- Responsive SaaS dashboard UI with React, Tailwind CSS, Recharts, Framer Motion, and Lucide Icons
-- FastAPI backend with routers, services, schemas, CORS, and Cloud Run-ready Dockerfiles
-- Local demo mode when Firebase or Gemini credentials are not configured
+---
 
-## Architecture
+# 🌐 Live Demo
+
+### 🚀 Try LastMinute AI
+
+**Application:**  
+https://ais-pre-a57lamwzaurzcb5dwcvhvz-721778151644.asia-southeast1.run.app/
+
+**GitHub Repository:**  
+https://github.com/israfathima/lastminute-ai
+
+---
+
+# 📖 Overview
+
+LastMinute AI is an AI-first, agentic productivity platform built to help users efficiently manage their academic, professional, and personal commitments.
+
+Instead of simply storing tasks, the platform actively understands deadlines, workload, available time, and priorities to generate intelligent execution plans.
+
+Using Google's Gemini AI, the system continuously evaluates task urgency, predicts completion probability, identifies risks, and recommends personalized actions that maximize productivity.
+
+Whether preparing for exams, managing client work, or organizing projects, LastMinute AI serves as an intelligent productivity companion.
+
+---
+
+# ✨ Features
+
+- 🔐 Google Sign-In with Firebase Authentication
+- 📋 AI-powered Task Management
+- 🤖 Gemini AI Planning Engine
+- 📅 Smart Daily Planner
+- 🎯 AI Command Center
+- ⚠️ Deadline Risk Prediction
+- 📈 Success Probability Estimation
+- 💡 Personalized Productivity Suggestions
+- 📝 Natural Language Task Creation
+- 📊 Productivity Dashboard
+- 📉 Analytics & Insights
+- 🎯 Focus Mode
+- ⏱️ Built-in Task Timer
+- 🔥 Burnout Detection
+- 📚 Weekly Productivity Review
+- 📱 Responsive SaaS Dashboard
+- ☁️ Google Cloud Run Deployment
+- ⚡ Demo Mode without Credentials
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|------------|--------------|
+| Frontend | React 19, Vite, Tailwind CSS |
+| Backend | FastAPI |
+| AI | Google Gemini API |
+| Authentication | Firebase Authentication |
+| Database | Cloud Firestore |
+| Charts | Recharts |
+| Icons | Lucide React |
+| Animations | Framer Motion |
+| Deployment | Google Cloud Run |
+| Containerization | Docker |
+| Version Control | Git & GitHub |
+
+---
+
+# 🏗 Architecture
 
 ```mermaid
 flowchart LR
-  User["User"] --> Frontend["React + Vite Dashboard"]
-  Frontend --> Auth["Firebase Google Auth"]
-  Frontend --> API["FastAPI Agent API on Cloud Run"]
-  API --> Gemini["Gemini Structured JSON Agent"]
-  API --> Firestore["Firebase Firestore"]
-  API --> Risk["Deadline Risk Engine"]
+
+A[User]
+
+A --> B[React Frontend]
+
+B --> C[Firebase Authentication]
+
+B --> D[FastAPI Backend]
+
+D --> E[Gemini AI]
+
+D --> F[Cloud Firestore]
+
+D --> G[Deadline Risk Engine]
+
+E --> H[AI Planning]
+
+F --> H
+
+G --> H
+
+H --> I[Daily Planner]
+
+H --> J[AI Insights]
+
+H --> K[Command Center]
 ```
 
-## Folder Structure
+---
+
+# ⚙️ AI Workflow
+
+```text
+User Input
+      │
+      ▼
+React Dashboard
+      │
+      ▼
+FastAPI Backend
+      │
+      ├────────► Firebase Authentication
+      │
+      ├────────► Firestore Database
+      │
+      └────────► Google Gemini AI
+                      │
+                      ▼
+         Structured Planning Engine
+                      │
+          ┌───────────┼────────────┐
+          ▼           ▼            ▼
+     Risk Analysis  Smart Plan  AI Suggestions
+          │           │            │
+          └───────────┼────────────┘
+                      ▼
+            Personalized Dashboard
+```
+
+---
+
+# 📂 Project Structure
 
 ```text
 lastminute-ai/
-  frontend/
-  backend/
-  docs/
-  README.md
+
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── services/
+│   └── assets/
+│
+├── backend/
+│   ├── app/
+│   ├── routers/
+│   ├── services/
+│   ├── schemas/
+│   ├── models/
+│   └── utils/
+│
+├── docs/
+│   └── screenshots/
+│
+├── docker-compose.yml
+├── README.md
+└── LICENSE
 ```
 
-## Installation
+---
 
-### Backend
+# 📊 Dashboard Modules
+
+## 🏠 AI Command Center
+
+- Productivity Score
+- Daily Focus
+- Deadline Health
+- Workload Analysis
+- Success Probability
+- Smart Suggestions
+
+---
+
+## 📅 Smart Planner
+
+- AI Generated Timeline
+- Execution Strategy
+- Priority Ranking
+- Daily Schedule
+- Estimated Completion Time
+
+---
+
+## 🤖 AI Coach
+
+- Productivity Recommendations
+- Motivation Messages
+- Smart Reminders
+- Next Best Action
+
+---
+
+## 🎯 Focus Mode
+
+- One Task View
+- Countdown Timer
+- Progress Tracking
+- Completion Action
+- Encouragement Messages
+
+---
+
+## 📈 Analytics
+
+- Weekly Productivity
+- Task Completion Rate
+- Deadline Distribution
+- Category Analysis
+- Burnout Detection
+- Time Waste Analysis
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/israfathima/lastminute-ai.git
+
+cd lastminute-ai
+```
+
+---
+
+## Backend Setup
 
 ```bash
 cd backend
+
 python -m venv .venv
+
+# Windows
+
 .venv\Scripts\activate
+
+# Linux / macOS
+
+source .venv/bin/activate
+
 pip install -r requirements.txt
+
 copy .env.example .env
+
 uvicorn app.main:app --reload
+```
+
+---
+
+## Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+copy .env.example .env
+
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🔑 Environment Variables
+
+## 🔑 Environment Variables
+
+### Backend
+
+Create a `.env` file inside the `backend` folder and add:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_SERVICE_ACCOUNT_JSON=your_firebase_service_account_json
+ALLOWED_ORIGINS=http://localhost:5173
 ```
 
 ### Frontend
 
-```bash
-cd frontend
-npm install
-copy .env.example .env
-npm run dev
+Create a `.env` file inside the `frontend` folder and add:
+
+```env
+VITE_API_URL=http://localhost:8000
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+VITE_FIREBASE_APP_ID=your_firebase_app_id
 ```
 
-Open `http://localhost:5173`.
+> **Note:** Never commit your actual API keys, Firebase credentials, or service account files to GitHub. Keep your `.env` files private and add them to `.gitignore`.
 
-The app runs in demo mode without credentials. Add Gemini and Firebase environment variables to enable production integrations.
+# ☁️ Google Technologies Used
 
-## Environment Variables
+- Google Gemini API
+- Firebase Authentication
+- Cloud Firestore
+- Google Cloud Run
+- Google Cloud Build
 
-Backend:
+---
 
-- `GEMINI_API_KEY`
-- `FIREBASE_PROJECT_ID`
-- `FIREBASE_SERVICE_ACCOUNT_JSON`
-- `ALLOWED_ORIGINS`
+# 📸 Screenshots
 
-Frontend:
+## Dashboard
 
-- `VITE_API_URL`
-- `VITE_FIREBASE_API_KEY`
-- `VITE_FIREBASE_AUTH_DOMAIN`
-- `VITE_FIREBASE_PROJECT_ID`
-- `VITE_FIREBASE_APP_ID`
 
-## Google Technologies Used
+<img width="915" height="587" alt="image" src="https://github.com/user-attachments/assets/d74415d8-17b3-4ae7-9438-e0e45f1edf43" />
 
-- Gemini API for agentic planning and recommendations
-- Firebase Authentication for Google login
-- Firebase Firestore for user-specific tasks
-- Google Cloud Run for container deployment
+---
 
-## Screenshot
+## AI Planner
 
-![Dashboard](docs/screenshots/dashboard.png)
 
-## Cloud Run Deployment
+<img width="918" height="383" alt="image" src="https://github.com/user-attachments/assets/5e8744f6-c4ac-4326-ab36-297a2a7896a8" />
 
-Docker Compose for local container validation:
+---
+
+## Focus Mode
+
+
+<img width="918" height="388" alt="image" src="https://github.com/user-attachments/assets/dd40c06f-e3cc-47ac-aef7-f68d3cafe036" />
+
+---
+
+## Analytics
+
+
+<img width="1918" height="378" alt="image" src="https://github.com/user-attachments/assets/8a9bb04e-ae02-4c48-8dee-ef3108ff19e4" />
+
+---
+
+# 🚀 Cloud Run Deployment
+
+## Local Docker
 
 ```bash
 docker compose up --build
 ```
 
-Backend:
+---
+
+## Backend Deployment
 
 ```bash
-gcloud builds submit backend --tag gcr.io/PROJECT_ID/lastminute-api
-gcloud run deploy lastminute-api --image gcr.io/PROJECT_ID/lastminute-api --platform managed --allow-unauthenticated --set-env-vars GEMINI_API_KEY=YOUR_KEY,FIREBASE_PROJECT_ID=PROJECT_ID,ALLOWED_ORIGINS=https://YOUR_FRONTEND_URL
+gcloud builds submit backend \
+--tag gcr.io/PROJECT_ID/lastminute-api
+
+gcloud run deploy lastminute-api \
+--image gcr.io/PROJECT_ID/lastminute-api \
+--platform managed \
+--allow-unauthenticated \
+--set-env-vars GEMINI_API_KEY=YOUR_KEY,FIREBASE_PROJECT_ID=PROJECT_ID,ALLOWED_ORIGINS=https://YOUR_FRONTEND_URL
 ```
 
-Frontend:
+---
+
+## Frontend Deployment
 
 ```bash
-gcloud builds submit frontend --tag gcr.io/PROJECT_ID/lastminute-web
-gcloud run deploy lastminute-web --image gcr.io/PROJECT_ID/lastminute-web --platform managed --allow-unauthenticated
+gcloud builds submit frontend \
+--tag gcr.io/PROJECT_ID/lastminute-web
+
+gcloud run deploy lastminute-web \
+--image gcr.io/PROJECT_ID/lastminute-web \
+--platform managed \
+--allow-unauthenticated
 ```
 
-## Future Scope
+---
 
-- Calendar write-back with Google Calendar
-- Voice planning assistant
-- Autonomous email or document prep actions
-- Habit streaks and accountability workflows
-- Push notifications and mobile companion app
+# 💡 Use Cases
 
-## License
+- 🎓 Student Assignment Planning
+- 📚 Semester Exam Preparation
+- 💼 Project Management
+- 👨‍💻 Software Development Planning
+- 📈 Startup Task Management
+- 📅 Personal Productivity
+- ⏰ Deadline Tracking
+- 🎯 Goal Achievement
 
-MIT
+---
+
+# 🔮 Future Enhancements
+
+- 📅 Google Calendar Integration
+- 📧 Gmail Integration
+- 🔔 Push Notifications
+- 🎤 Voice Assistant
+- 📱 Android & iOS Applications
+- 👥 Team Collaboration
+- 📊 Advanced Productivity Analytics
+- 🤖 Autonomous AI Task Execution
+
+---
+
+# 🎓 Learning Outcomes
+
+This project demonstrates practical knowledge of:
+
+- Agentic AI Applications
+- Google Gemini API
+- Prompt Engineering
+- React Development
+- FastAPI
+- Firebase Authentication
+- Cloud Firestore
+- Google Cloud Run
+- Docker
+- REST API Development
+- SaaS Dashboard Design
+- AI-powered Productivity Systems
+
+---
+
+# 👩‍💻 Author
+
+**Mohammed Isra Fathima**
+
+B.Tech – Computer Science & Engineering (AI & ML)
+
+🔗 GitHub: https://github.com/israfathima
+
+🌐 Project Repository:
+
+https://github.com/israfathima/lastminute-ai
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork this repository
+2. Create a feature branch
+3. Commit your changes
+4. Push the branch
+5. Open a Pull Request
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+Your support motivates future improvements and helps others discover the project.
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
